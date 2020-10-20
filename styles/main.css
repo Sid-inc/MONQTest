@@ -106,17 +106,17 @@ body {
   display: block;
   list-style: none;
   width: 392px;
-  height: 35px;
+  height: 43px;
   background: #f8f7fa;
   border-radius: 2px;
-  padding: 8px 4px 7px 4px;
+  padding: 0 4px 7px 4px;
   margin-top: 40px
 }
 .focused {
   background: #fff;
   border: 2px solid rgba(47,128,237,.75);
   width: 388px;
-  height: 31px
+  height: 39px
 }
 .focused label {
   color: #2f80ed;
@@ -129,7 +129,7 @@ body {
   background: #f8f7fa;
   border: 2px solid #f5bcbc;
   width: 388px;
-  height: 31px
+  height: 39px
 }
 .error label {
   color: #f64c4c;
@@ -171,7 +171,7 @@ body {
 .group-info__desc-wrapper {
   background: #f8f7fa;
   border-radius: 2px;
-  width: calc(100% -20px);
+  width: calc(100% - 20px);
   padding: 8px 4px 8px 12px;
   margin-top: 20px;
   margin-bottom: 20px
@@ -184,9 +184,8 @@ body {
 .group-info__desc {
   margin-top: 4px;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 15px;
   width: 100%;
-  height: 140px;
   background: #f8f7fa;
   outline: 0;
   resize: none;
@@ -289,5 +288,5 @@ body {
 .group-info__scroll-wrapper {
   overflow: auto;
   min-height: 300px;
-  max-height: 60vh
+  max-height: 85vh
 }
