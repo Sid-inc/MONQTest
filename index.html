@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <title>Site</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1 class="main-header__title">Профиль рабочей группы</h1>
+        <p class="main-header__text">В данном разделе вы можете посмотреть и отредактировать информацию по своей рабочей
+            группе, настроить права участников, расшарить настройки полностью или частично для других рабочих групп, а
+            также сделать полную копию вашей рабочей группы с ограниченным доступом для тонкой настройки без публичных
+            оповещений.</p>
+    </header>
+    <main class="container">
+        <section class="group-info">
+            <h2 class="group-info__title">Основная информация</h2>
+            <div class="alert">
+                <h3 class="alert__title">Внимание!</h3>
+                <p class="alert__text">Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку
+                    “Отправить”, чтобы завершить редактирование.</p>
+            </div>
+            <form action="#" class="group-info__form" name="form-data">
+                <ul class="group-info__list">
+                    <li class="group-info__item">
+                        <label class="group-info__label" for="group-name">Название группы</label>
+                        <input class="group-info__input" type="text" name="group-name">
+                    </li>
+                    <li class="group-info__item">
+                        <label class="group-info__label" for="group-alias">Алиас</label>
+                        <input class="group-info__input" type="text" name="group-alias">
+                    </li>
+                    <li class="group-info__item">
+                        <label class="group-info__label" for="group-email">Электронная почта для обращений</label>
+                        <input class="group-info__input" type="text" name="group-email">
+                    </li>
+                    <li class="group-info__item">
+                        <label class="group-info__label" for="group-phone">Телефон представителя</label>
+                        <input class="group-info__input" type="text" name="group-phone"
+                            placeholder="+7 (XXX) XXX-XX-XX">
+                    </li>
+                    <li class="group-info__item">
+                        <label class="group-info__label" for="group-fio">ФИО представителя</label>
+                        <input class="group-info__input" type="text" name="group-fio"
+                            placeholder="Введите полные данные представителя">
+                    </li>
+                    <li class="group-info__item">
+                        <label class="group-info__label" for="group-owner">Должность ответственного</label>
+                        <input class="group-info__input" type="text" name="group-owner"
+                            placeholder="Введите полное наименование должности">
+                    </li>
+                </ul>
+
+                <label class="group-info__desc-label" for="desc">Описание рабочей группы для внутреннего
+                    использования</label>
+                <textarea class="group-info__desc" name="desc" cols="30" rows="10"
+                    placeholder="Введите краткое и емкое описание">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</textarea>
+                <input class="group-info__checkbox" type="checkbox" name="desc-checkbox">
+                <label class="group-info__desc-checkbox" for="desc-checkbox">Публичное описание отличается от
+                    внутреннего</label>
+                <label class="group-info__public-desc-label" for="public-desc">Публичное описание рабочей группы</label>
+                <textarea class="group-info__public-desc" name="public-desc" cols="30" rows="10"
+                    placeholder="Введите краткое и емкое описание"></textarea>
+                <div class="group-info__buttons">
+                    <button class="group-info__button button">Отправить на модерацию</button>
+                    <button class="group-info__button button">Отмена</button>
+                    <button class="group-info__button button">Сохранить в мои черновики</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
