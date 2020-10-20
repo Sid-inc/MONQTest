@@ -32,7 +32,7 @@ body {
 
 .main-header {
   @include center();
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .main-header__title {
@@ -63,7 +63,6 @@ body {
 
 .container {
   @include center();
-  height: 100vh;
 }
 
 .group-info__title {
