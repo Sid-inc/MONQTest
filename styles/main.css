@@ -144,12 +144,13 @@ body {
   padding-top: 3px;
   padding-left: 14px;
   left: -2px;
-  top: 46px;
+  bottom: -15px;
   height: 15px;
   width: calc(100% - 10px);
   background: #f5bcbc;
   border-radius: 0 0 2px 2px;
-  color: #800404
+  color: #800404;
+  z-index: 1
 }
 .group-info__error {
   position: absolute;
@@ -158,7 +159,7 @@ body {
   color: #800404;
   left: 14px;
   bottom: -13px;
-  z-index: 5
+  z-index: 50
 }
 .group-info__label {
   font-size: 11px;
@@ -179,12 +180,14 @@ body {
   outline: 0
 }
 .group-info__desc-wrapper {
+  position: relative;
   background: #f8f7fa;
   border-radius: 2px;
   width: calc(100% - 20px);
   padding: 8px 4px 8px 12px;
   margin-top: 20px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  margin-left: 2px
 }
 .group-info__desc-label {
   font-size: 11px;
@@ -298,6 +301,5 @@ body {
 .group-info__scroll-wrapper {
   overflow: auto;
   min-height: 300px;
-  max-height: 58vh;
   margin-top: 20px
 }

@@ -149,12 +149,13 @@ body {
     padding-top: 3px;
     padding-left: 14px;
     left: -2px;
-    top: 46px;
+    bottom: -15px;
     height: 15px;
     width: calc(100% - 10px);
     background: #F5BCBC;
     border-radius: 0px 0px 2px 2px;
     color: #800404;
+    z-index: 1;
   }
 }
 
@@ -165,7 +166,7 @@ body {
   color: #800404;
   left: 14px;
   bottom: -13px;
-  z-index: 5;
+  z-index: 50;
 }
 
 .group-info__label {
@@ -189,12 +190,14 @@ body {
 }
 
 .group-info__desc-wrapper {
+  position: relative;
   background: #F8F7FA;
   border-radius: 2px;
   width: calc(100% - 20px);
   padding: 8px 4px 8px 12px;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 2px;
 }
 
 .group-info__desc-label {
@@ -312,6 +315,6 @@ body {
 .group-info__scroll-wrapper {
   overflow: auto;
   min-height: 300px;
-  max-height: 58vh;
+  //max-height: 58vh;
   margin-top: 20px;
 }

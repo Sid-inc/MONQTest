@@ -59,96 +59,105 @@ inp.onkeydown = function() {
 
 
 // Validation
+
+function spanShow (elem_id, element, elem_html) {
+  if(!document.getElementById('error_' + elem_id)){
+  element.parentNode.classList.remove('focused');
+  element.parentNode.classList.add('error');
+  let span_for_elem = span.cloneNode(true);
+  span_for_elem.id = 'error_' + elem_id;
+  span_for_elem.innerHTML = elem_html;
+  element.parentNode.append(span_for_elem);
+  }
+}
+
 let span = document.createElement('span');
 span.className = 'group-info__error';
 //Group name
 document.getElementById('group-name').onblur = function() {
   if (this.value === '') {
-    this.parentNode.classList.remove('focused');
-    this.parentNode.classList.add('error');
-    span.innerHTML = 'Название группы не может быть пустым';
-    this.parentNode.append(span);
+    spanShow('group-name', this, 'Название группы не может быть пустым');
   }else {
     this.parentNode.classList.remove('error');
-    span.remove();
+    if(document.getElementById('error_group-name')){document.getElementById('error_group-name').remove()};
   };
   this.parentNode.classList.remove('focused');
 };
 //Alias
 document.getElementById('group-alias').onblur = function() {
   if (this.value === '') {
-    span.innerHTML = 'Алиас не может быть пустым';
-    this.parentNode.classList.remove('focused');
-    this.parentNode.classList.add('error');
-    this.parentNode.append(span);
+    spanShow('group-alias', this, 'Алиас не может быть пустым');
   } else if (/[А-Яа-я\s]/.test(this.value)) {
-      span.innerHTML = 'Алиас не может содержать русские буквы и пробелы';
-      this.parentNode.classList.remove('focused');
-      this.parentNode.classList.add('error');
-      this.parentNode.append(span);
+      spanShow('group-alias', this, 'Алиас не может содержать русские буквы и пробелы');
   }else{
     this.parentNode.classList.remove('error');
-    span.remove();
+    if(document.getElementById('error_group-alias')){document.getElementById('error_group-alias').remove()};
   };
   this.parentNode.classList.remove('focused');
 };
 //Email
 document.getElementById('group-email').onblur = function() {
   if (this.value === '') {
-    span.innerHTML = 'Email не может быть пустым';
-    this.parentNode.classList.remove('focused');
-    this.parentNode.classList.add('error');
-    this.parentNode.append(span);
+    spanShow('group-email', this, 'Email не может быть пустым');
   } else if (!/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(this.value)) {
-      span.innerHTML = 'Введен некорректный Email';
-      this.parentNode.classList.remove('focused');
-      this.parentNode.classList.add('error');
-      this.parentNode.append(span);
+    spanShow('group-email', this, 'Введен некорректный Email');  
   }else{
     this.parentNode.classList.remove('error');
-    span.remove();
+    if(document.getElementById('error_group-email')){document.getElementById('error_group-email').remove()};
   };
   this.parentNode.classList.remove('focused');
 };
 //Tel
 document.getElementById('group-phone').onblur = function() {
   if (this.value === '') {
-    this.parentNode.classList.remove('focused');
-    this.parentNode.classList.add('error');
-    span.innerHTML = 'Телефон не может быть пустым';
-    this.parentNode.append(span);
+    spanShow('group-phone', this, 'Телефон не может быть пустым');
   }else {
     this.parentNode.classList.remove('error');
-    span.remove();
+    if(document.getElementById('error_group-fio')){document.getElementById('error_group-phone').remove()};
   };
   this.parentNode.classList.remove('focused');
 };
 //FIO
 document.getElementById('group-fio').onblur = function() {
   if (this.value === '') {
-    this.parentNode.classList.remove('focused');
-    this.parentNode.classList.add('error');
-    span.innerHTML = 'ФИО представителя не может быть пустым';
-    this.parentNode.append(span);
+    spanShow('group-fio', this, 'ФИО представителя не может быть пустым');
   }else {
     this.parentNode.classList.remove('error');
-    span.remove();
+    if(document.getElementById('error_group-fio')){document.getElementById('error_group-fio').remove()};
   };
   this.parentNode.classList.remove('focused');
 };
 //Owner
 document.getElementById('group-owner').onblur = function() {
   if (this.value === '') {
-    this.parentNode.classList.remove('focused');
-    this.parentNode.classList.add('error');
-    span.innerHTML = 'Должность ответственного не может быть пустым';
-    this.parentNode.append(span);
+    spanShow('group-owner', this, 'Должность ответственного не может быть пустым');
   }else {
     this.parentNode.classList.remove('error');
-    span.remove();
+    if(document.getElementById('error_group-owner')){document.getElementById('error_group-owner').remove()};
   };
   this.parentNode.classList.remove('focused');
 };
+//Desc
+document.getElementById('desc').onblur = function() {
+  if (this.value === '') {
+    spanShow('desc', this, 'Описание не может быть пустым');
+  }else {
+    this.parentNode.classList.remove('error');
+    if(document.getElementById('error_desc')){document.getElementById('error_desc').remove()};
+  };
+  this.parentNode.classList.remove('focused');
+};
+//Public-desc
+document.getElementById('public-desc').onblur = function() {
+  if (this.value === '') {
+    spanShow('public-desc', this, 'Описание не может быть пустым');
+  }else {
+    this.parentNode.classList.remove('error');
+    if (document.getElementById('error_public-desc')) {document.getElementById('error_public-desc').remove()};
+  };
+  this.parentNode.classList.remove('focused');
+};
+
 
 //Focus style
 document.getElementById('group-name').onfocus = function() {
@@ -169,3 +178,29 @@ document.getElementById('group-fio').onfocus = function() {
 document.getElementById('group-owner').onfocus = function() {
   this.parentNode.classList.add('focused');
 };
+document.getElementById('desc').onfocus = function() {
+  this.parentNode.classList.add('focused');
+};
+document.getElementById('public-desc').onfocus = function() {
+  this.parentNode.classList.add('focused');
+};
+
+//Btn Send
+document.getElementById('btn-send').onclick = function() {
+  let counterHide = 0;
+  let intervalHide = setInterval(function() {
+    counterHide-=10;
+    document.getElementById("alert").style.transform = `translateX(${counterHide}px)`;
+    if (counterHide <= -500) {
+        document.getElementById("alert").style.display = "none";
+        clearInterval(intervalHide);
+      };
+    }, 1);
+}
+
+document.getElementById('desc-checkbox').onclick = function() {
+  if(this.checked) {
+    document.getElementById('public-desc').enable;
+  }
+  
+}
