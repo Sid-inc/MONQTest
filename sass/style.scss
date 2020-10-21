@@ -26,8 +26,16 @@ $main-width: 1240px;
   padding: 0;
 }
 
+html{
+  margin: 0;
+  height: 100%;
+}
+
 body {
   font-family: Ubuntu, sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 260px 1fr 130px;
 }
 
 .main-header {
@@ -63,9 +71,10 @@ body {
 
 .container {
   @include center();
+  overflow: auto;
 }
 
-.group-info__title {
+.main-header__sub-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
@@ -242,6 +251,8 @@ body {
 }
 
 .group-info__buttons {
+  padding-left: 100px;
+  padding-right: 100px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -310,11 +321,4 @@ body {
   &:active {
     background: #C4C4C4;
   }
-}
-
-.group-info__scroll-wrapper {
-  overflow: auto;
-  min-height: 300px;
-  //max-height: 58vh;
-  margin-top: 20px;
 }

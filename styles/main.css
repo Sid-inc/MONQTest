@@ -14,8 +14,17 @@
   margin: 0;
   padding: 0
 }
+html {
+  margin: 0;
+  height: 100%
+}
 body {
-  font-family: Ubuntu,sans-serif
+  font-family: Ubuntu,sans-serif;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 260px 1fr 130px;
+  grid-template-rows: 260px 1fr 130px
 }
 .main-header {
   max-width: 1440px;
@@ -51,9 +60,10 @@ body {
   max-width: 1440px;
   padding-right: 100px;
   padding-left: 100px;
-  margin: 0 auto
+  margin: 0 auto;
+  overflow: auto
 }
-.group-info__title {
+.main-header__sub-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
@@ -225,6 +235,8 @@ body {
   background: url(../images/checkbox-checked.svg) no-repeat left center
 }
 .group-info__buttons {
+  padding-left: 100px;
+  padding-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,9 +309,4 @@ body {
 }
 .group-info__btn-save:active {
   background: #c4c4c4
-}
-.group-info__scroll-wrapper {
-  overflow: auto;
-  min-height: 300px;
-  margin-top: 20px
 }
