@@ -21,7 +21,7 @@
     <main class="container">
         <section class="group-info">
             <h2 class="group-info__title">Основная информация</h2>
-            <div class="alert">
+            <div class="alert" id="alert">
                 <h3 class="alert__title">Внимание!</h3>
                 <p class="alert__text">Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку
                     “Отправить”, чтобы завершить редактирование.</p>
@@ -29,10 +29,9 @@
             <form action="#" class="group-info__form" name="form-data">
                 <div class="group-info__scroll-wrapper">
                     <ul class="group-info__list">
-                        <li class="group-info__item error">
+                        <li class="group-info__item">
                             <label class="group-info__label" for="group-name">Название группы</label></br>
                             <input class="group-info__input" type="text" name="group-name" id="group-name">
-                            <span class="group-info__error">Aaaaaaa</span>
                         </li>
                         <li class="group-info__item">
                             <label class="group-info__label" for="group-alias">Алиас</label></br>
@@ -45,8 +44,7 @@
                         </li>
                         <li class="group-info__item">
                             <label class="group-info__label" for="group-phone">Телефон представителя</label></br>
-                            <input class="group-info__input" type="tel" pattern="\+7\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
-                                name="group-phone" id="group-phone" placeholder="+7 (XXX) XXX-XX-XX">
+                            <input class="group-info__input" type="tel" name="group-phone" id="group-phone" placeholder="+7 (XXX) XXX-XX-XX">
                         </li>
                         <li class="group-info__item">
                             <label class="group-info__label" for="group-fio">ФИО представителя</label></br>
@@ -76,9 +74,9 @@
                     </div>
                 </div>
                 <div class="group-info__buttons">
-                    <button class="group-info__btn-send button">Отправить на модерацию</button>
-                    <button class="group-info__btn-cancel button">Отмена</button>
-                    <button class="group-info__btn-save button" disabled>Сохранить в мои черновики</button>
+                    <button class="group-info__btn-send button" id="btn-send" type="button">Отправить на модерацию</button>
+                    <button class="group-info__btn-cancel button" id="btn-cancel" type="button">Отмена</button>
+                    <button class="group-info__btn-save button " id="btn-save" type="button" disabled>Сохранить в мои черновики</button>
                 </div>
             </form>
         </section>

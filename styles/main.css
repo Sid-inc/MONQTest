@@ -61,16 +61,18 @@ body {
   opacity: .9
 }
 .alert {
-  display: none;
   border-radius: 0 4px 4px 0;
   width: 373px;
   height: 70px;
-  margin-top: 20px;
   padding-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   margin-left: -300px;
   padding-left: 300px;
   color: #333;
-  background: url(../images/alert.svg) no-repeat right 20px center,rgba(251,217,44,.16)
+  background: url(../images/alert.svg) no-repeat right 20px center,rgba(251,217,44,.16);
+  -webkit-transform: translateX(-500px);
+  transform: translateX(-500px)
 }
 .alert__title {
   font-weight: 700;
@@ -296,5 +298,6 @@ body {
 .group-info__scroll-wrapper {
   overflow: auto;
   min-height: 300px;
-  max-height: 58vh
+  max-height: 58vh;
+  margin-top: 20px
 }

@@ -74,16 +74,17 @@ body {
 }
 
 .alert {
-  display: none;
   border-radius: 0px 4px 4px 0px;
   width: 373px;
   height: 70px;
-  margin-top: 20px;
   padding-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   margin-left: -300px;
   padding-left: 300px;
   color: #333333;
   background: url(../images/alert.svg) no-repeat right 20px center, rgba(251, 217, 44, 0.16);
+  transform: translateX(-500px);
 }
 
 .alert__title {
@@ -312,4 +313,5 @@ body {
   overflow: auto;
   min-height: 300px;
   max-height: 58vh;
+  margin-top: 20px;
 }
