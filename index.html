@@ -29,47 +29,50 @@
             <form action="#" class="group-info__form" name="form-data">
                 <div class="group-info__scroll-wrapper">
                     <ul class="group-info__list">
-                        <li class="group-info__item">
-                            <label class="group-info__label" for="group-name">Название группы</label></br>
-                            <input class="group-info__input" type="text" name="group-name">
-                        </li>
                         <li class="group-info__item error">
-                            <label class="group-info__label" for="group-alias">Алиас</label></br>
-                            <input class="group-info__input" type="text" name="group-alias">
+                            <label class="group-info__label" for="group-name">Название группы</label></br>
+                            <input class="group-info__input" type="text" name="group-name" id="group-name">
+                            <span class="group-info__error">Aaaaaaa</span>
                         </li>
-                        <li class="group-info__item focused">
-                            <label class="group-info__label" for="group-email">Электронная почта для обращений</label></br>
-                            <input class="group-info__input" type="text" name="group-email">
+                        <li class="group-info__item">
+                            <label class="group-info__label" for="group-alias">Алиас</label></br>
+                            <input class="group-info__input" type="text" name="group-alias" id="group-alias">
+                        </li>
+                        <li class="group-info__item">
+                            <label class="group-info__label" for="group-email">Электронная почта для
+                                обращений</label></br>
+                            <input class="group-info__input" type="text" name="group-email" id="group-email">
                         </li>
                         <li class="group-info__item">
                             <label class="group-info__label" for="group-phone">Телефон представителя</label></br>
-                            <input class="group-info__input" type="tel" pattern="\+7\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" name="group-phone"
-                                placeholder="+7 (XXX) XXX-XX-XX">
+                            <input class="group-info__input" type="tel" pattern="\+7\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
+                                name="group-phone" id="group-phone" placeholder="+7 (XXX) XXX-XX-XX">
                         </li>
                         <li class="group-info__item">
                             <label class="group-info__label" for="group-fio">ФИО представителя</label></br>
-                            <input class="group-info__input" type="text" name="group-fio"
+                            <input class="group-info__input" type="text" name="group-fio" id="group-fio"
                                 placeholder="Введите полные данные представителя">
                         </li>
                         <li class="group-info__item">
                             <label class="group-info__label" for="group-owner">Должность ответственного</label></br>
-                            <input class="group-info__input" type="text" name="group-owner"
+                            <input class="group-info__input" type="text" name="group-owner" id="group-owner"
                                 placeholder="Введите полное наименование должности">
                         </li>
                     </ul>
                     <div class="group-info__desc-wrapper">
                         <label class="group-info__desc-label" for="desc">Описание рабочей группы для внутреннего
-                        использования</label><br>
-                        <textarea class="group-info__desc" name="desc" cols="30" rows="5"
-                        placeholder="Введите краткое и емкое описание">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</textarea>
+                            использования</label><br>
+                        <textarea class="group-info__desc" name="desc" id="desc" cols="30" rows="6"
+                            placeholder="Введите краткое и емкое описание">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</textarea>
                     </div>
                     <input class="group-info__checkbox" type="checkbox" name="desc-checkbox" id="desc-checkbox">
                     <label class="group-info__desc-checkbox" for="desc-checkbox">Публичное описание отличается от
                         внутреннего</label>
                     <div class="group-info__desc-wrapper">
-                        <label class="group-info__desc-label" for="public-desc">Публичное описание рабочей группы</label><br>
-                        <textarea class="group-info__desc" name="public-desc" cols="30" rows="5"
-                        placeholder="Введите краткое и емкое описание"></textarea>
+                        <label class="group-info__desc-label" for="public-desc">Публичное описание рабочей
+                            группы</label><br>
+                        <textarea class="group-info__desc" name="public-desc" id="public-desc" cols="30" rows="6"
+                            placeholder="Введите краткое и емкое описание"></textarea>
                     </div>
                 </div>
                 <div class="group-info__buttons">
@@ -80,6 +83,7 @@
             </form>
         </section>
     </main>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

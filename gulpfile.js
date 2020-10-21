@@ -18,14 +18,13 @@ function scripts() {
   return src([
     'js/script.js'
   ])
-    .pipe(concat('app.min.js'))
-    .pipe(uglify())
+    .pipe(concat('app.js'))
     .pipe(dest('js/'))
     .pipe(browserSync.stream());
 }
 
 function startwatch() {
-  watch(['**/*.js', '!**/*.min.js'], scripts);
+  watch(['**/*.js', '!**/app.js'], scripts);
   watch('sass/**/*.scss', styles);
   watch('*.html').on('change', browserSync.reload);
 }

@@ -32,7 +32,7 @@ body {
 
 .main-header {
   @include center();
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .main-header__title {
@@ -74,13 +74,14 @@ body {
 }
 
 .alert {
+  display: none;
   border-radius: 0px 4px 4px 0px;
   width: 373px;
   height: 70px;
   margin-top: 20px;
   padding-top: 20px;
-  margin-left: -100px;
-  padding-left: 100px;
+  margin-left: -300px;
+  padding-left: 300px;
   color: #333333;
   background: url(../images/alert.svg) no-repeat right 20px center, rgba(251, 217, 44, 0.16);
 }
@@ -104,6 +105,8 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .group-info__item {
@@ -111,7 +114,6 @@ body {
   display: block;
   list-style: none;
   width: 392px;
-  height: 43px;
   background: #F8F7FA;
   border-radius: 2px;
   padding: 0px 4px 7px 4px;
@@ -120,9 +122,9 @@ body {
 
 .focused {
   background: #FFFFFF;
-  border: 2px solid rgba(47, 128, 237, 0.75);
-  width: 388px;
-  height: 39px;
+  box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.75);
+  width: 392px;
+  z-index: 100;
   label {
     color: #2F80ED;
     opacity: 1;
@@ -134,18 +136,15 @@ body {
 
 .error {
   background: #F8F7FA;
-  border: 2px solid #F5BCBC;
-  width: 388px;
-  height: 39px;
+  box-shadow: 0 0 0 2px #F5BCBC;
+  width: 392px;
   label {
     color: #F64C4C;
     opacity: 1;
   }
   &::after {
     position: absolute;
-    content: "Алиас не может содержать русские буквы и пробелы";
-    font-size: 11px;
-    line-height: 13px;
+    content: "";
     padding-top: 3px;
     padding-left: 14px;
     left: -2px;
@@ -154,8 +153,18 @@ body {
     width: calc(100% - 10px);
     background: #F5BCBC;
     border-radius: 0px 0px 2px 2px;
-    color: #800404;;
+    color: #800404;
   }
+}
+
+.group-info__error {
+  position: absolute;
+  font-size: 11px;
+  line-height: 13px;
+  color: #800404;
+  left: 14px;
+  bottom: -13px;
+  z-index: 5;
 }
 
 .group-info__label {
@@ -196,7 +205,7 @@ body {
 .group-info__desc {
   margin-top: 4px;
   font-size: 14px;
-  line-height: 15px;
+  line-height: 14px;
   width: 100%;
   background: #F8F7FA;
   outline: none;
@@ -233,7 +242,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 .button {
@@ -297,11 +306,10 @@ body {
   &:active {
     background: #C4C4C4;
   }
-
 }
 
 .group-info__scroll-wrapper {
   overflow: auto;
   min-height: 300px;
-  max-height: 85vh;
+  max-height: 58vh;
 }
