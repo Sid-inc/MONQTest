@@ -13,8 +13,11 @@ for (let i = 0; i < elements.length; i++) {
     } else {
       document.getElementById('desc-checkbox').removeAttribute('checked');
     }
+    //Show alert
     if (element.value) {
-      document.getElementById("alert").style.display = "";
+      document.getElementsByClassName('main-header')[0].style.height = "270px";
+      document.getElementsByClassName('container')[0].style.marginTop = "320px";
+      document.getElementById("alert").style.display = ""; 
       let counter = -499;
       let interval1 = setInterval(function () {
         counter += 10;
@@ -74,6 +77,7 @@ function spanShow(elem_id, element, elem_html) {
     span_for_elem.id = 'error_' + elem_id;
     span_for_elem.innerHTML = elem_html;
     element.parentNode.append(span_for_elem);
+    this.style.borderBottom = 'none';
   }
 }
 
@@ -168,27 +172,35 @@ document.getElementById('public-desc').onblur = function () {
 //Focus style
 document.getElementById('group-name').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-alias').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-email').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-phone').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-fio').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-owner').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('desc').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 document.getElementById('public-desc').onfocus = function () {
   this.parentNode.classList.add('focused');
+  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
 };
 
 //Btn Send
@@ -202,6 +214,8 @@ document.getElementById('btn-send').onclick = function () {
       clearInterval(intervalHide);
     };
   }, 1);
+  document.getElementsByClassName('main-header')[0].style.height = "210px";
+      document.getElementsByClassName('container')[0].style.marginTop = "210px";
 }
 
 //check box
