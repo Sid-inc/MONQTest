@@ -77,7 +77,7 @@ function spanShow(elem_id, element, elem_html) {
     span_for_elem.id = 'error_' + elem_id;
     span_for_elem.innerHTML = elem_html;
     element.parentNode.append(span_for_elem);
-    this.style.borderBottom = 'none';
+    element.style.borderBottom = 'none';
   }
 }
 
