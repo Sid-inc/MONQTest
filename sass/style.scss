@@ -1,7 +1,7 @@
 $main-width: 1240px;
 
 @mixin center (){
-  max-width: $main-width + 200px;
+  max-width: $main-width;
   padding-right: 100px;
   padding-left: 100px;
   margin: 0 auto;
@@ -33,6 +33,7 @@ html{
 
 body {
   font-family: Ubuntu, sans-serif;
+  min-height: 600px;
   height: 100vh;
   display: grid;
   grid-template-rows: 260px 1fr 130px;
@@ -250,14 +251,17 @@ body {
   background: url(../images/checkbox-checked.svg) no-repeat left center;
 }
 
-.group-info__buttons {
-  padding-left: 100px;
-  padding-right: 100px;
+
+.main-footer {
+  @include center();
+  width: 100%;
+}
+
+.buttons_list {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 35px;
 }
 
 .button {
@@ -275,7 +279,7 @@ body {
 }
 
 
-.group-info__btn-send{
+.button__send{
   margin-right: 20px;
   background: #2F80ED;
   color: #ffffff;
@@ -292,7 +296,7 @@ body {
   }
 }
 
-.group-info__btn-cancel {
+.button__cancel {
   background: #E9E9E9;
   &:hover {
     background: #DBDBDB;
@@ -307,7 +311,7 @@ body {
   }
 }
 
-.group-info__btn-save {
+.button__save {
   margin-left: auto;
   background: #E9E9E9;
   &:hover {
@@ -321,4 +325,9 @@ body {
   &:active {
     background: #C4C4C4;
   }
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
 }
