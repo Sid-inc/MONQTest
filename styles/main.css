@@ -19,17 +19,26 @@ html {
   height: 100%
 }
 body {
-  font-family: Ubuntu,sans-serif
-}
-.main-header {
+  max-width: 1240px;
   padding-right: 100px;
   padding-left: 100px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 210px;
-  margin-top: 40px
+  margin: 0 auto;
+  font-family: Ubuntu,sans-serif;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap
+}
+.main-header {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: 80px
 }
 .main-header__title {
   font-weight: 600;
@@ -55,16 +64,12 @@ body {
   border-radius: 2px
 }
 .container {
-  padding-right: 100px;
-  padding-left: 100px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-  margin-top: 210px;
-  margin-bottom: 145px
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: auto;
+  min-height: 2em;
+  max-height: 500px
 }
 .main-header__sub-title {
   font-weight: 600;
@@ -256,13 +261,9 @@ body {
   background: url(../images/checkbox-checked.svg) no-repeat left center
 }
 .main-footer {
-  padding-right: 100px;
-  padding-left: 100px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 145px
+  padding: 1em;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
 }
 .buttons_list {
   display: -webkit-box;
