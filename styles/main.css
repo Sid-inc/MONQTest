@@ -142,7 +142,8 @@ body {
   background: #f8f7fa;
   border-radius: 2px;
   padding: 0 4px 7px 4px;
-  margin-top: 40px
+  margin-top: 40px;
+  cursor: pointer
 }
 .group-info__item:hover {
   background: #f1f5f9
@@ -150,31 +151,31 @@ body {
 .group-info__item:hover > input {
   background: #f1f5f9
 }
-.focused {
+.group-info__item--focused {
   background: #fff;
   -webkit-box-shadow: 0 0 0 2px rgba(47,128,237,.75);
   box-shadow: 0 0 0 2px rgba(47,128,237,.75);
   width: 392px;
   z-index: 100
 }
-.focused label {
+.group-info__item--focused label {
   color: #2f80ed;
   opacity: 1
 }
-.focused input {
+.group-info__item--focused input {
   background: #fff
 }
-.error {
+.group-info__item--error {
   background: #f8f7fa;
   -webkit-box-shadow: 0 0 0 2px #f5bcbc;
   box-shadow: 0 0 0 2px #f5bcbc;
   width: 392px
 }
-.error label {
+.group-info__item--error label {
   color: #f64c4c;
   opacity: 1
 }
-.error::after {
+.group-info__item--error::after {
   position: absolute;
   content: "";
   padding-top: 3px;
@@ -213,7 +214,8 @@ body {
   background: #f8f7fa;
   border: none;
   padding-left: 8px;
-  outline: 0
+  outline: 0;
+  cursor: pointer
 }
 .group-info__desc-wrapper {
   position: relative;
@@ -246,7 +248,10 @@ body {
   font-family: Roboto,sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: #182c40
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #182c40;
+  cursor: pointer
 }
 .group-info__desc-checkbox:hover {
   background: url(../images/checkbox.svg) no-repeat left center,rgba(47,128,237,.05);

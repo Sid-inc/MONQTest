@@ -15,9 +15,7 @@ for (let i = 0; i < elements.length; i++) {
     }
     //Show alert
     if (element.value) {
-      document.getElementsByClassName('main-header')[0].style.height = "270px";
-      document.getElementsByClassName('container')[0].style.marginTop = "320px";
-      document.getElementById("alert").style.display = ""; 
+      document.getElementById("alert").style.display = "";
       let counter = -499;
       let interval1 = setInterval(function () {
         counter += 10;
@@ -71,13 +69,13 @@ inp.onkeydown = function () {
 
 function spanShow(elem_id, element, elem_html) {
   if (!document.getElementById('error_' + elem_id)) {
-    element.parentNode.classList.remove('focused');
-    element.parentNode.classList.add('error');
+    element.parentNode.classList.remove('group-info__item--focused');
+    element.parentNode.classList.add('group-info__item--error');
     let span_for_elem = span.cloneNode(true);
     span_for_elem.id = 'error_' + elem_id;
     span_for_elem.innerHTML = elem_html;
     element.parentNode.append(span_for_elem);
-    element.style.borderBottom = 'none';
+    element.style.boxShadow = 'none';
   }
 }
 
@@ -88,10 +86,10 @@ document.getElementById('group-name').onblur = function () {
   if (this.value === '') {
     spanShow('group-name', this, 'Название группы не может быть пустым');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_group-name')) { document.getElementById('error_group-name').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 //Alias
 document.getElementById('group-alias').onblur = function () {
@@ -100,10 +98,10 @@ document.getElementById('group-alias').onblur = function () {
   } else if (/[А-Яа-я\s]/.test(this.value)) {
     spanShow('group-alias', this, 'Алиас не может содержать русские буквы и пробелы');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_group-alias')) { document.getElementById('error_group-alias').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 //Email
 document.getElementById('group-email').onblur = function () {
@@ -112,95 +110,95 @@ document.getElementById('group-email').onblur = function () {
   } else if (!/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(this.value)) {
     spanShow('group-email', this, 'Введен некорректный Email');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_group-email')) { document.getElementById('error_group-email').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('focgroup-info__item--focusedused');
 };
 //Tel
 document.getElementById('group-phone').onblur = function () {
   if (this.value === '') {
     spanShow('group-phone', this, 'Телефон не может быть пустым');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_group-phone')) { document.getElementById('error_group-phone').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 //FIO
 document.getElementById('group-fio').onblur = function () {
   if (this.value === '') {
     spanShow('group-fio', this, 'ФИО представителя не может быть пустым');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_group-fio')) { document.getElementById('error_group-fio').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 //Owner
 document.getElementById('group-owner').onblur = function () {
   if (this.value === '') {
     spanShow('group-owner', this, 'Должность ответственного не может быть пустым');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_group-owner')) { document.getElementById('error_group-owner').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 //Desc
 document.getElementById('desc').onblur = function () {
   if (this.value === '') {
     spanShow('desc', this, 'Описание не может быть пустым');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_desc')) { document.getElementById('error_desc').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 //Public-desc
 document.getElementById('public-desc').onblur = function () {
   if (this.value === '') {
     spanShow('public-desc', this, 'Описание не может быть пустым');
   } else {
-    this.parentNode.classList.remove('error');
+    this.parentNode.classList.remove('group-info__item--error');
     if (document.getElementById('error_public-desc')) { document.getElementById('error_public-desc').remove() };
   };
-  this.parentNode.classList.remove('focused');
+  this.parentNode.classList.remove('group-info__item--focused');
 };
 
 
 //Focus style
 document.getElementById('group-name').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-alias').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-email').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-phone').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-fio').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('group-owner').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('desc').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 document.getElementById('public-desc').onfocus = function () {
-  this.parentNode.classList.add('focused');
-  this.style.borderBottom = 'solid 1px rgba(0,0,0,.05)';
+  this.parentNode.classList.add('group-info__item--focused');
+  this.style.boxShadow = '0 1px 0 1px rgba(0,0,0,.05)';
 };
 
 //Btn Send
@@ -214,8 +212,6 @@ document.getElementById('btn-send').onclick = function () {
       clearInterval(intervalHide);
     };
   }, 1);
-  document.getElementsByClassName('main-header')[0].style.height = "210px";
-      document.getElementsByClassName('container')[0].style.marginTop = "210px";
 }
 
 //check box
