@@ -144,7 +144,7 @@ body {
   }
 }
 
-.group-info__item--focused {
+.group-info__item--sed {
   background: #FFFFFF;
   box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.75);
   width: 392px;
@@ -239,6 +239,9 @@ body {
   outline: none;
   resize: none;
   border: none;
+  &:disabled {
+    opacity: .7;
+  }
 }
 
 .group-info__desc-checkbox{
@@ -270,7 +273,6 @@ body {
 
 
 .main-footer {
-  padding: 1em;
   flex-shrink: 0;
 }
 
@@ -296,7 +298,7 @@ body {
 }
 
 
-.button__send{
+.button--send{
   margin-right: 20px;
   background: #2F80ED;
   color: #ffffff;
@@ -313,7 +315,7 @@ body {
   }
 }
 
-.button__cancel {
+.button--cancel {
   background: #E9E9E9;
   &:hover {
     background: #DBDBDB;
@@ -328,7 +330,7 @@ body {
   }
 }
 
-.button__save {
+.button--save {
   margin-left: auto;
   background: #E9E9E9;
   &:hover {

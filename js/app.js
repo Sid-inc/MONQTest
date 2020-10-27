@@ -202,7 +202,7 @@ document.getElementById('public-desc').onfocus = function () {
 };
 
 //Btn Send
-document.getElementById('btn-send').onclick = function () {
+document.getElementById('button-send').onclick = function () {
   let counterHide = 0;
   let intervalHide = setInterval(function () {
     counterHide -= 10;
@@ -224,3 +224,11 @@ document.getElementById('desc-checkbox').onclick = function () {
     sessionStorage.setItem('checkbox', 1);
   }
 }
+/*
+document.addEventListener('click', function (e) {
+  if (e.target.tagName == 'LI') {
+    console.log(e.target);
+    e.target.child.focus();
+  }
+});
+*/

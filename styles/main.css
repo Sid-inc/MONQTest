@@ -151,18 +151,18 @@ body {
 .group-info__item:hover > input {
   background: #f1f5f9
 }
-.group-info__item--focused {
+.group-info__item--sed {
   background: #fff;
   -webkit-box-shadow: 0 0 0 2px rgba(47,128,237,.75);
   box-shadow: 0 0 0 2px rgba(47,128,237,.75);
   width: 392px;
   z-index: 100
 }
-.group-info__item--focused label {
+.group-info__item--sed label {
   color: #2f80ed;
   opacity: 1
 }
-.group-info__item--focused input {
+.group-info__item--sed input {
   background: #fff
 }
 .group-info__item--error {
@@ -242,6 +242,9 @@ body {
   resize: none;
   border: none
 }
+.group-info__desc:disabled {
+  opacity: .7
+}
 .group-info__desc-checkbox {
   padding-left: 28px;
   background: url(../images/checkbox.svg) no-repeat left center;
@@ -266,7 +269,6 @@ body {
   background: url(../images/checkbox-checked.svg) no-repeat left center
 }
 .main-footer {
-  padding: 1em;
   -ms-flex-negative: 0;
   flex-shrink: 0
 }
@@ -298,49 +300,49 @@ body {
   outline: 0;
   z-index: 4
 }
-.button__send {
+.button--send {
   margin-right: 20px;
   background: #2f80ed;
   color: #fff
 }
-.button__send:hover {
+.button--send:hover {
   background: #2974d9
 }
-.button__send:focus {
+.button--send:focus {
   background: #2f80ed;
   border: 2px solid rgba(47,128,237,.5);
   padding: 12px 18px 11px 18px
 }
-.button__send:active {
+.button--send:active {
   background: #236acb
 }
-.button__cancel {
+.button--cancel {
   background: #e9e9e9
 }
-.button__cancel:hover {
+.button--cancel:hover {
   background: #dbdbdb
 }
-.button__cancel:focus {
+.button--cancel:focus {
   background: #e9e9e9;
   border: 2px solid #dbdbdb;
   padding: 12px 18px 11px 18px
 }
-.button__cancel:active {
+.button--cancel:active {
   background: #c4c4c4
 }
-.button__save {
+.button--save {
   margin-left: auto;
   background: #e9e9e9
 }
-.button__save:hover {
+.button--save:hover {
   background: #dbdbdb
 }
-.button__save:focus {
+.button--save:focus {
   background: #e9e9e9;
   border: 2px solid #dbdbdb;
   padding: 12px 18px 11px 18px
 }
-.button__save:active {
+.button--save:active {
   background: #c4c4c4
 }
 .disabled {
